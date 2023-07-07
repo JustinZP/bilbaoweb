@@ -25,7 +25,6 @@ steps:
     CleanTargetFolder: true
     PreserveTimestamp: true
   condition: succeededOrFailed()
-
 - task: PublishBuildArtifacts@1
   displayName: 'Publish Artifact: drop'
   inputs:
