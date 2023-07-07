@@ -1,0 +1,14 @@
+-------------------------------------------------------------------------------
+Test set: pruebas.runeditar
+-------------------------------------------------------------------------------
+Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 0.688 sec <<< FAILURE!
+Editar información de un empleado existente(Editar empleado)  Time elapsed: 0.125 sec  <<< ERROR!
+java.lang.NullPointerException
+	at steps.editar.seEditaElNombreYApellido(editar.java:26)
+	at ?.se edita el nombre a "John" y el apellido a "Doe"(file:///C:/Users/hp/Desktop/Bilbo_Web/src/test/java/pruebas/RegistrarProveedor.feature:4)
+
+Error al editar un empleado(Editar empleado)  Time elapsed: 0 sec  <<< ERROR!
+java.lang.NullPointerException
+	at steps.editar.seEditaElNombreYApellido(editar.java:26)
+	at ?.se edita el nombre a "" y el apellido a "Doe"(file:///C:/Users/hp/Desktop/Bilbo_Web/src/test/java/pruebas/RegistrarProveedor.feature:9)
+

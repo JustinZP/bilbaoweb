@@ -1,0 +1,141 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "start_timestamp": "2023-07-07T01:06:33.248Z",
+        "line": 2,
+        "name": "Editar información de un empleado existente",
+        "description": "",
+        "id": "editar-empleado;editar-información-de-un-empleado-existente",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 3,
+            "name": "un empleado con DNI \"12345678\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"12345678\"",
+                  "offset": 20
+                }
+              ],
+              "location": "steps.editar.unEmpleadoConDNI(java.lang.String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "error_message": "java.lang.NullPointerException\r\n\tat steps.editar.seEditaElNombreYApellido(editar.java:26)\r\n\tat ✽.se edita el nombre a \"John\" y el apellido a \"Doe\"(file:///C:/Users/hp/Desktop/Bilbo_Web/src/test/java/pruebas/RegistrarProveedor.feature:4)\r\n",
+              "status": "failed"
+            },
+            "line": 4,
+            "name": "se edita el nombre a \"John\" y el apellido a \"Doe\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"John\"",
+                  "offset": 21
+                },
+                {
+                  "val": "\"Doe\"",
+                  "offset": 44
+                }
+              ],
+              "location": "steps.editar.seEditaElNombreYApellido(java.lang.String,java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 5,
+            "name": "la consulta SQL generada debe ser \"UPDATE tbempleado SET nombre\u003d\u0027John\u0027 apellido\u003d\u0027Doe\u0027 direccion\u003d\u0027[dirección actual]\u0027 where dni\u003d\u002712345678\u0027\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"UPDATE tbempleado SET nombre\u003d\u0027John\u0027 apellido\u003d\u0027Doe\u0027 direccion\u003d\u0027[dirección actual]\u0027 where dni\u003d\u002712345678\u0027\"",
+                  "offset": 34
+                }
+              ],
+              "location": "steps.editar.laConsultaSQLGeneradaDebeSer(java.lang.String)"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2023-07-07T01:06:33.357Z",
+        "line": 7,
+        "name": "Error al editar un empleado",
+        "description": "",
+        "id": "editar-empleado;error-al-editar-un-empleado",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "un empleado con DNI \"12345678\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"12345678\"",
+                  "offset": 20
+                }
+              ],
+              "location": "steps.editar.unEmpleadoConDNI(java.lang.String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "error_message": "java.lang.NullPointerException\r\n\tat steps.editar.seEditaElNombreYApellido(editar.java:26)\r\n\tat ✽.se edita el nombre a \"\" y el apellido a \"Doe\"(file:///C:/Users/hp/Desktop/Bilbo_Web/src/test/java/pruebas/RegistrarProveedor.feature:9)\r\n",
+              "status": "failed"
+            },
+            "line": 9,
+            "name": "se edita el nombre a \"\" y el apellido a \"Doe\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"\"",
+                  "offset": 21
+                },
+                {
+                  "val": "\"Doe\"",
+                  "offset": 40
+                }
+              ],
+              "location": "steps.editar.seEditaElNombreYApellido(java.lang.String,java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 10,
+            "name": "la consulta SQL generada no debe ser ejecutada y se debe retornar falso",
+            "match": {
+              "location": "steps.editar.laConsultaSQLNoDebeSerEjecutadaYSedbeRetornarFalso()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      }
+    ],
+    "name": "Editar empleado",
+    "description": "",
+    "id": "editar-empleado",
+    "keyword": "Feature",
+    "uri": "file:src/test/java/pruebas/RegistrarProveedor.feature",
+    "tags": []
+  }
+]
