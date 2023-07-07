@@ -8,7 +8,6 @@ trigger:
 
 pool:
   vmImage: ubuntu-latest
-
 steps:
 - task: Maven@3
   displayName: 'Maven app/pom.xml'
